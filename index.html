@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HelloWorld</title>
+    <script src="index.js"></script>        <!--外部引用js文件-->
+</head>
+<body>
+    <div>
+        <img src="../images/1.png" />
+    </div>
+
+    <!-- 内部js -->
+    <script>
+        document.write('HelloWorld JS!');
+
+        let myImage = document.querySelector('img');
+        myImage.onclick = function() {
+            let myImageSrc = myImage.getAttribute('src');
+            if (myImageSrc === '../images/1.png') {
+                myImage.setAttribute('src', '../images/2.png');
+            } else {
+                myImage.setAttribute('src', '../images/1.png');
+            }
+        }
+    </script>
+    <!---->
+</body>
+</html>
